@@ -1,0 +1,138 @@
+.header{ height:auto; width:100%; border-bottom:2px solid #353535; z-index:1; position:relative; clear:both; display:block; background:#3D648A; }
+.header:after{ content:"."; display:block; height:0; clear:both; visibility:hidden; }
+	.header > div{ float:left; height:50px; margin-top:5px; margin-bottom:5px; }
+	.header .logo_box{  width:250px; margin-right:25px; }
+	.header .logo_box img{ height:50px; width:auto; }
+	.header .searchbar{ width:400px; margin-right:25px; }
+	.header .searchbar form{ position:relative; top:7px; padding:0; margin:0; width:100%; height:30px; }
+	.header .searchbar input[type="text"]{width:100%; height:30px; line-height:30px; font-size:14px; color:#555; float:left; border:1px solid #555; display:block; text-indent:10px; overflow:hidden; }
+	.header .searchbar input[type="text"]:focus { outline:none; }
+	.header .searchbar input[type="submit"]{ float:left; height:32px; width:61px; position:absolute; margin-left:-61px; top:1px; font-size:0.8em; padding-left:10px; text-align:center; border:0px; }
+	.header .menu_holder{ min-width:400px; max-width:450px; background:#2c4863; 
+		-moz-box-shadow: inset 0 0 4px 1px #444;
+		-webkit-box-shadow: inset 0 0 4px 1px #444;
+		box-shadow: inset 0 0 4px 1px #444;
+	}
+		.header .menu{ list-style-type:none; list-style:none; height:50px; }
+		.header .menu > li{ float:left; line-height:50px; display:inline-block; height:100%; padding-left:15px; padding-right:15px; font-size:1em; color:#eee;
+			-moz-transition    : all 0.3s;
+			-o-transition      : all 0.3s;
+			-webkit-transition : all 0.3s;
+			transition         : all 0.3s;
+		}
+		.header .menu > li:hover{ cursor:pointer;  color:#fff; background: #233B52; }
+		.header .menu > li.selected{ cursor:pointer;  color:#fff; background: #233B52; }
+		.ie7 .menu{ overflow:hidden; }
+		.ie7 .menu li a{color:#eee; }
+		.ie7 .menu li a:hover{ color:#fff; cursor:pointer; }
+		.ie7 .menu li.selected a { color:#fff; cursor:pointer; }
+
+.sidebar{ position:fixed; top:0px; left:-1px; width:200px; background:#2c4863; height:100%; overflow:hidden; z-index:0; border:1px solid #cdcdcd; }
+	.sidebar ul { list-style:none; list-style-type:none; width:100%; display:block; }
+	.sidebar ul li{ float:left; color:#eee; display:block; width:100%; font-size:1em; padding-left:10px; padding-top:15px; padding-bottom:15px; border-left:5px solid transparent; 
+		-moz-transition    : all 0.3s;
+		-o-transition      : all 0.3s;
+		-webkit-transition : all 0.3s;
+		transition         : all 0.3s;
+	}
+	.sidebar ul li:hover {background:#233B52; cursor:pointer; border-left:5px solid #333; color:#fff;}
+	.sidebar ul li span{ height:17px; display:inline-block; color:#ccc; }
+	.sidebar ul li:hover span[class*="icon"]{color:#fff;}
+	.sidebar .container{height:auto; float:left; display:block; width:100%; margin-top:105px;}
+	.sidebar .option_box{ height:auto; float:left; display:block; background:#BC143B; margin-bottom:15px; width:100%; color:white; border-top:2px solid #444; border-bottom:2px solid #444; }
+	.sidebar h1, .sidebar h2, .sidebar h3,.sidebar h4, .sidebar h5, .sidebar h6 { line-height:35px; margin:7px; }
+	.sidebar .option_box img{width:60%; height:auto; margin-top:10px;}
+		.ie7 .sidebar ul li {height:30px;}
+		.ie7 .sidebar ul li a{color:#eee;}
+		.ie7 .sidebar ul li a:hover{color:#fff;}
+		.ie7 .sidebar ul li span{position:relative; top:-30px; zoom:1; font-family:Calibri;}
+
+.game a{ text-decoration:none; color:#222; }
+.game img{ max-height:100px; max-width:100px; }
+.overlay{ position:fixed; display:none; background:rgb(2,2,2); background:rgba(2,2,2,0.7); width:100%; height:100%; left:0; top:0; z-index:1000000;}
+	.overlay .container-12{ background:#ebebeb; border:1px solid #c5c5c5; color:#222; margin:0 auto; margin-top:20px; }
+	.overlay .container-12 .group {margin-bottom:20px;}
+	.overlay:target{ display:block; }
+	.overlay .close{ position:absolute; float:right; position:relative; top:-45px; margin-right:5px; cursor:pointer; color:#777; font-weight:bold; }
+	.overlay .close:hover { color:#555; }
+	.overlay > .container-12 > .group:first-child {background:#f1f1f1; border-bottom:3px solid #ddd;}
+
+.body { padding:10px; background:url('../images/body_bg.png'); border:1px solid #c5c5c5; color:#222; margin-bottom:10px; }
+.body { position:relative; left:225px; top:15px; max-width:960px;}
+.body form, .overlay form {display:block;}
+	.body form label, .overlay form label { display:block; margin-bottom:15px; width:100%; clear:both; height:auto; width:100%; line-height:25px;}
+	.body form label:after, .overlay form label:after { display:block; font-size:0; content:" "; clear:both; height:0; }
+	.body form label h1, .body form label h2, .body form label h3, .body form label h4, .body form label h5, .body form label h6{
+		margin-top:5px;
+		margin-left:7px;
+	}
+	.overlay form label h1, .overlay form label h2, .overlay form label h3, .overlay form label h4, .overlay form label h5, .overlay form label h6{
+		margin-top:5px;
+		margin-left:7px;
+	}
+	.body form input, .overlay form input { background:#f5f5f5; text-indent:15px; height:25px; line-height:25px; font-size:1em; color:#444; min-width:200px; border:1px solid #bbb; float:right; margin-right:7px; clear:right;}
+	.body form textarea, .overlay form textarea { background:#f5f5f5; line-height:20px; font-size:15px; color:#444; min-width:200px; border:1px solid #bbb; float:right; margin-right:7px; clear:right; height:150px; }
+	.body form input[type="submit"], .overlay form input[type="submit"] { margin-bottom:15px; display:block; }
+	.game h5 { font-size:12px; line-height:20px; }
+
+.overlay .container-12{ overflow-y:auto; overflow-x:hidden; max-height:90%; }
+.overlay form .form-error, .body form .form-error { background:#ffcccc; border:1px solid #ff9999; color:#ff3333; }
+.overlay form .form-success, .body form .form-success { border:1px solid #458B00; background:#C0D9AF; color:#458B00; }
+.noise {background-image:url('../images/noise.png');}
+.g_overlay {width:100%; height:100%; display:block;}
+.g_container {margin:auto; display:block;}
+.importance {background:#f5f5f5;}
+.inline {display:inline-block;}
+
+@media screen and (min-device-width:769px){
+		@media only screen and (min-width:1400px) {
+			.body { position:relative; left:50%; margin-left:-470px; top:15px; max-width:960px;}
+			.header .logo_box { 
+			margin-left:calc(50% - 550px);
+			}
+		}
+		img.push{margin-top:20px;}
+		body{ width:100%; min-width:1220px; }
+		.menu_holder{ -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; overflow:hidden; }
+		.game:hover:after{
+			display:none; content:attr(data-gamedesc); float:left; position:absolute; width:250px; padding:5px; background:#eee; border:1px solid #bbb; 
+			margin-top:108px;
+			-moz-border-radius:5px;
+			-o-border-radius:5px;
+			-webkit-border-radius:5px;
+			border-radius:5px;
+			display:block;
+		}
+		.game:hover:before{
+			float:left;
+			position:absolute;
+			margin-left:60px;
+			margin-top:100px;
+			border-left: 10px solid transparent;
+			border-bottom: 10px solid #bbb; 
+			border-right:10px solid transparent; 
+			content:" ";
+			display:block;
+		}
+	}
+@media screen and (min-device-width:320px) and (max-device-width:480px) {
+		.header > div{ display:block; clear:both; width:100%; }
+		.header .searchbar{ width:85%; margin-left:7%; }
+		.header .menu_holder { height:240px; min-width:100%; max-width:100%; margin-bottom:0px; }
+		.header .menu { height:auto; display:block;}
+		.header .menu > li { display:block; width:100%; height:40px; text-align:center; line-height:40px; padding:0; }
+		.sidebar { display:none; }
+		.body { position:relative; overflow-x:hidden; top:-100px; margin-bottom:0px }
+		.body .grid-parent img{ max-height:50px; max-width:50px;  }
+		html, body{ width:100%; }
+		body { padding:0; }
+		.overlay .container-12{ overflow:scroll; }
+	}
+@media screen and (max-device-width:768px) {
+		.header .menu_holder{ float:none; clear:both; display:block; margin-left:auto; margin-right:auto; }
+		.sidebar {position:fixed; top:122px; left:-200px; }
+		.body { margin-top:140px; left:0px; }
+		img.push{margin-top:10px;}
+	}
+
+	

@@ -1,0 +1,212 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight:inherit;
+	font-style:inherit;
+	font-family:inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+@font-face {
+	font-family: 'OpenSans-Regular'; 
+	src:url('http://myrighttoplay.com/format/fonts/OpenSans-Regular.eot');
+	src:url('http://myrighttoplay.com/format/fonts/OpenSans-Regular.eot?#') format('embedded-opentype'), 
+	url('http://myrighttoplay.com/format/fonts/OpenSans-Regular.woff') format('woff'),
+	url('http://myrighttoplay.com/format/fonts/OpenSans-Regular.svg#OpenSans-Regular') format('svg'),
+	url('http://myrighttoplay.com/format/fonts/OpenSans-Regular.ttf') format('truetype');
+	}
+	
+@font-face {
+	font-family: 'Modernpics';
+	src:url('http://myrighttoplay.com/format/fonts/modernpics.eot');
+	src:url('http://myrighttoplay.com/format/fonts/modernpics.eot?#') format('embedded-opentype'),
+	url('http://myrighttoplay.com/format/fonts/modernpics.woff') format('woff'),
+	url('http://myrighttoplay.com/format/fonts/modernpics.svg#Modernpics') format('svg'),
+	url('http://myrighttoplay.com/format/fonts/modernpics.ttf') format('truetype');
+	}
+	
+@font-face {
+	font-family: 'OrangeJuice';
+	src:url('http://myrighttoplay.com/format/fonts/Orange_Juice.eot');
+	src:url('http://myrighttoplay.com/format/fonts/Orange_Juice.eot?#') format('embedded-opentype'),
+	url('http://myrighttoplay.com/format/fonts/Orange_Juice.woff') format('woff'),
+	url('http://myrighttoplay.com/format/fonts/Orange_Juice.svg#OrangeJuice') format('svg'),
+	url('http://myrighttoplay.com/format/fonts/Orange_Juice.ttf') format('truetype');
+	}
+
+.orange_juice{
+	font-family:OrangeJuice, OpenSans-Regular, Arial, Times New Roman;
+}
+
+
+
+html,body{
+	font-family: OpenSans-Regular, Arial, Times New Roman;
+	font-size:12px;
+	background:url('../images/bg.png');
+	padding-bottom:20px;
+}
+
+
+
+
+body{ font-size:12px; line-height:30px; }
+h1, h2, h3, h4, h5, h6{ font-weight:normal; margin-bottom:0.4em; line-height:24px; }
+h1{ font-size:18px; line-height:36px; }
+h2{ font-size:17px; line-height:35px; }
+h3{ font-size:16px; line-height:34px; }
+h4{ font-size:15px; line-height:33px; }
+h5{ font-size:14px; line-height:32px; }
+h6{ font-size:13px; line-height:31px; }
+p{ font-size:1em; line-height:2.5em; display:block; }
+img { width:100%; height:auto; }
+.pad-heading h1, .pad-heading h2, .pad-heading h3, .pad-heading h4, .pad-heading h5, .pad-heading h6{margin-left:7px;}
+/* The grid is too small for writing, but too large for images. Decrease image size. */ 
+.group > .grid-2 img, .group > .grid-1 img { width:50%; margin-left:25%; margin-right:25%; }
+.group > .grid-2, .group > .grid-1 { text-align:center; }
+	
+.green-gradient{
+background: #22aa7b;
+background: -moz-linear-gradient(top,  #22aa7b 0%, #0fa872 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#22aa7b), color-stop(100%,#0fa872));
+background: -webkit-linear-gradient(top,  #22aa7b 0%,#0fa872 100%);
+background: -o-linear-gradient(top,  #22aa7b 0%,#0fa872 100%);
+background: -ms-linear-gradient(top,  #22aa7b 0%,#0fa872 100%);
+background: linear-gradient(to bottom,  #22aa7b 0%,#0fa872 100%);
+color:white;
+border:1px solid #09A56C;
+}
+
+.purple-gradient{
+background: #793e99;
+background: -moz-linear-gradient(top,  #793e99 0%, #712c99 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#793e99), color-stop(100%,#712c99));
+background: -webkit-linear-gradient(top,  #793e99 0%,#712c99 100%);
+background: -o-linear-gradient(top,  #793e99 0%,#712c99 100%);
+background: -ms-linear-gradient(top,  #793e99 0%,#712c99 100%);
+background: linear-gradient(to bottom,  #793e99 0%,#712c99 100%);
+}
+
+.red-gradient{
+background: #8c2e31;
+background: -moz-linear-gradient(top,  #8c2e31 0%, #8e272b 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8c2e31), color-stop(100%,#8e272b));
+background: -webkit-linear-gradient(top,  #8c2e31 0%,#8e272b 100%);
+background: -o-linear-gradient(top,  #8c2e31 0%,#8e272b 100%);
+background: -ms-linear-gradient(top,  #8c2e31 0%,#8e272b 100%);
+background: linear-gradient(to bottom,  #8c2e31 0%,#8e272b 100%);
+}
+
+.easein{
+-moz-transition    : all 0.3s;
+-o-transition      : all 0.3s;
+-webkit-transition : all 0.3s;
+transition         : all 0.3s;
+}
+
+.radius-5{
+-webkit-border-radius:5px;
+-moz-border-radius:5px;
+border-radius:5px;
+}
+
+.radius-10{
+-webkit-border-radius:10px;
+-moz-border-radius:10px;
+border-radius:10px;
+}
+
+.circle{
+-webkit-border-radius:100%;
+-moz-border-radius:100%;
+border-radius:100%;
+}
+
+.insetshadow{
+-moz-box-shadow: inset 0 0 5px 1px #ccc;
+-webkit-box-shadow: inset 0 0 5px 1px #ccc;
+box-shadow: inset 0 0 5px 1px #ccc;
+}
+
+.inset_right{
+-moz-box-shadow: inset -2px 0 5px 1px #444;
+-webkit-box-shadow: inset -2px 0 5px 1px #444;
+box-shadow: inset -2px 0 5px 1px #444;
+}
+
+
+span[class*="icon"] {
+font-size:1.75em;
+float:right;
+position:relative;
+left:-30px;
+color:#777;
+display:inline-block;
+}
+
+div > a, ul li > a {color:inherit; text-decoration:inherit; font-family:inherit; font-size:inherit;}
+a {text-decoration:none; color:#222;}
+a:active{ outline: none; }
+a:focus{ -moz-outline-style: none; }
+.body textarea{ width:100%; height:100%; display:block; font-size:15px;}
+
+li > a { width:100%; height:100%; display:inline-block; }
+span[class*="modernpics"] { font-family:Modernpics !important; font-size:23px; cursor:pointer; }
+
+b, strong { font-weight:bold; color:#444; }
+.bold { font-weight:bold; color:#793e99; }
+.light { font-weight:200; color:#444; }
+.body button, .body .button, .body input[type="submit"], .overlay button, .overlay input[type="submit"]  { border:1px solid #444; background:#793e99; color:#efefef; min-height:35px; text-align:center; margin-top:10px; margin-bottom:10px; max-width:250px; cursor:pointer; display:block; 
+-moz-transition    : all 0.2s;
+-o-transition      : all 0.2s;
+-webkit-transition : all 0.2s;
+transition         : all 0.2s;
+font-size:1em;
+line-height:35px;
+}
+.body button:hover, .body .button:hover, .body input[type="submit"]:hover, .overlay button:hover, .overlay input[type="submit"]:hover { border:1px solid #222; background:#712c99; color:#fff; }
+.body button, .body .button, .body input[type="submit"] { margin:0 auto; }
+.body button { display:inline-block; margin:0 auto; }
+
+hr{ border:0; background:#ccc; height:1px; border:1px solid #ddd; width:80%; margin-top:10px; margin-bottom:10px;}
+input[name="message"]{ display:none; }
+.text-center{text-align:center;}
+.ad{ height:600px; width:160px; position:fixed; right:0; margin-right:25px; top:120px; float:left; }

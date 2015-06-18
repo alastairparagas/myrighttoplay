@@ -1,0 +1,63 @@
+@mixin border-radius($radius:10px){
+	-webkit-border-radius:$radius;
+	-moz-border-radius:$radius;
+	border-radius:$radius;
+}
+
+@mixin font-face($font-family, $font-url, $font-style:normal, $font-weight:400){
+	@font-face {
+		font-family: '#{$font-family}'; 
+		src:url('#{$font-url}.eot');
+		src:url('#{$font-url}.eot?#') format('embedded-opentype'), 
+		url('#{$font-url}.woff') format('woff'),
+		url('#{$font-url}.svg##{$font-family}') format('svg'),
+		url('#{$font-url}.ttf') format('truetype');
+		font-style:$font-style;
+		font-weight:$font-weight;
+	}
+}
+
+@mixin linear-gradient($top-color, $bottom-color){
+	background-color: $top-color;
+	background: -moz-linear-gradient(top,  $top-color 0%, $bottom-color 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top-color), color-stop(100%,$bottom-color));
+	background: -webkit-linear-gradient(top,  $top-color 0%,$bottom-color 100%);
+	background: -o-linear-gradient(top,  $top-color 0%,$bottom-color 100%);
+	background: -ms-linear-gradient(top,  $top-color 0%,$bottom-color 100%);
+	background: linear-gradient($top-color, $bottom-color);
+}
+
+@mixin box-shadow($hor-offset:0px, $ver-offset:0px, $blur-size:5px, $color:#222){
+	-moz-box-shadow: $hor-offset $ver-offset $blur-size $color;
+	-webkit-box-shadow: $hor-offset $ver-offset $blur-size $color;
+	box-shadow: $hor-offset $ver-offset $blur-size $color;
+}
+
+@mixin keyframes($animationName){
+    @-webkit-keyframes $animationName {
+        @content;
+    }
+    @-moz-keyframes $animationName {
+        @content;
+    }
+    @-o-keyframes $animationName {
+        @content;
+    }
+    @keyframes $animationName {
+        @content;
+    }
+}
+
+@mixin animation($animationName, $time, $animation-iteration-count:1){
+	-webkit-animation: $animationName $time $animation-iteration-count;
+     -moz-animation: $animationName $time $animation-iteration-count;
+       -o-animation: $animationName $time $animation-iteration-count;
+          animation: $animationName $time $animation-iteration-count;
+}
+
+@mixin box-sizing($sizingMethod:border-box){
+	-moz-box-sizing:   $sizingMethod ;
+	   -webkit-box-sizing: $sizingMethod;
+		box-sizing:        $sizingMethod;
+}
+

@@ -1,0 +1,3 @@
+<FilesMatch "\.(jpg|jpeg|png|gif)$">
+Header set Expires "access plus 1 days"
+</FilesMatch>

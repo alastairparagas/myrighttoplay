@@ -1,0 +1,48 @@
+AddHandler application/x-httpd-php53 .php 
+
+<IfModule mod_deflate.c>
+AddOutputFilter DEFLATE js css
+AddOutputFilterByType DEFLATE text/plain text/xml application/xhtml+xml text/css application/xml application/rss+xml application/atom_xml application/x-javascript application/x-httpd-php application/x-httpd-fastphp text/html
+</Ifmodule>
+
+#The following lines are to avoid bugs with some browsers
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+
+
+<FilesMatch "\.(css|js)$">
+Header set Expires "access plus 1 days"
+</FilesMatch>
+
+<FilesMatch "\.(swf)$">
+Header set Expires "access plus 1 days"
+</FilesMatch>
+
+# Google Analytics Integration - Added by cPanel.
+<IfModule mod_substitute.c>
+AddOutputFilterByType SUBSTITUTE text/html
+Substitute "s|(<script src='/google_analytics_auto.js'></script>)?</head>|<script src='/google_analytics_auto.js'></script></head>|i"
+</IfModule>
+# END Google Analytics Integration
+
+Options +FollowSymlinks
+RewriteEngine On
+SetEnvIfNoCase User-Agent "^libwww-perl*" block_bad_bots
+Deny from env=block_bad_bots
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1%{REQUEST_URI} [R=301,QSA,NC,L]
+  
+RewriteCond %{SCRIPT_FILENAME} !-d  
+RewriteCond %{SCRIPT_FILENAME} !-f  
+
+<FilesMatch "\.(ttf|otf|eot|woff)$">
+  <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+  </IfModule>
+</FilesMatch>
+
+RewriteRule ^games/(.*)$ ./gamepage.php?gameid=$1 [L,B]
+RewriteRule ^profile/(.*)$ ./profile.php?user=$1 [L,B]
+RewriteRule ^mail/ ./mail.php [L,B]

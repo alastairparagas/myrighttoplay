@@ -1,0 +1,103 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+$font-size = 12px;
+$line-height = 30px;
+
+@include font-face(OpenSans-Regular, http://myrighttoplay.com/format/fonts/OpenSans-Regular);
+@include font-face(Modernpics, http://myrighttoplay.com/format/fonts/modernpics);
+@include font-face(OrangeJuice, http://myrighttoplay.com/format/fonts/Orange_Juice);
+
+.orange_juice { font-family: OrangeJuice,OpenSans-Regular,Arial,Times New Roman; }
+.green-gradient { @include linear-gradient(#22aa7b, #0fa872); }
+.purple-gradient { @include linear-gradient(#793e99, #712c99); }
+.red-gradient { @include linear-gradient(#8c2e31, #8e272b); }
+
+@for $hcounter from 1 to 6{
+	h#{$hcounter}{
+		font-size: $font-size + 1 * (7 - $hcounter);
+		line-height: $line-height + 1 * (7 - $hcounter);
+	}
+}
+
+html{
+	padding-bottom: 20px;
+	font-family: OpenSans-Regular,Arial,Times New Roman;
+	font-size: $font-size;
+	background: url('../images/bg.png');
+}
+
+body{
+	@extend html;
+	line-height: $line-height;
+}
+
+p{
+	display: block;
+	font-size: 1em;
+	line-height: 2.5em;
+}
+
+img{
+	width:100%;
+	height:auto;
+}
+
+.pad-heading{
+	h1, h2, h3, h4, h5, h6{
+		margin-left: 7px;
+	}
+}
+
+.group{
+	& > .grid-1, .grid-2{
+	
+	}
+}
+

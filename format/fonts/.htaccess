@@ -1,0 +1,3 @@
+<FilesMatch "\.(woff|ttf|eot|svg)$">
+Header set Expires "access plus 14 days"
+</FilesMatch>
